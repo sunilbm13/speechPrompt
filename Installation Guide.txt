@@ -1,0 +1,37 @@
+1. Install Python from https://www.python.org/downloads/ - Download suitable Mac/Windows/Linux image
+2. Follow the instructions to install
+3. Install git https://github.com/git-guides/install-git - Download suitable Mac/Windows/Linux image
+4. Install git bash (good to install, if not already installed with git) - https://www.atlassian.com/git/tutorials/git-bash#:~:text=How%20to%20install%20Git%20Bash,open%20to%20execute%20Git%20Bash.
+5. Go to C:\Users\<username>\AppData\Local\Programs\Python\Python311\Scripts\Apps
+6. Create a folder speechPrompt in this path
+7. Download all the files from GitHub to this folder. GitHub url for this project - https://github.com/sunilbm13/speechPrompt.git
+8. Now go to the speechPrompt and see if you the files as in GitHub
+9. If not, right click in empty space and click on more options, you should see Git Bash. Click on it and command prompt is opened. Execute below command
+10. git init
+11. git clone https://github.com/sunilbm13/speechPrompt.git
+12. If you do not have git setup then just go the git repository url and select master branch. Now click on Code <> dropdown and Select Download Zip. Extract all the files in the speechPrompt folder.
+
+Installation of Libraries one by one as below
+1. Open the bash command prompt as explained in point 9 above. 
+2. pip install streamlit - Execute this command
+3. pip install googletrans==4.0.0-rc1 - Next install google translators
+4. pip install SpeechRecognition - Next install Speech recognition
+5. pip install gTTS - Next install Text to Speech convertor
+
+Running the app
+1. Go to speechPrompt folder and double click frontend.py
+2. OR Open git bash command promptr and execute below command
+streamlit run frontend.py
+3. default browser is opened automatically with the running web app
+4. if not the local url is given to run in web browser. As in below
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.1.13:8501
+ 
+
+
+GPT chat link - Conversation history while building this app
+https://chat.openai.com/share/767c6053-f5bd-4dc1-b38f-69e5e713f520
+
+
