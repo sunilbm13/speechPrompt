@@ -1,0 +1,23 @@
+/*  style.css  */
+body {
+    background-image: url('background_image.jpg');
+    background-size: cover;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.top {
+    margin-bottom: 20px;
+}
+
+.bottom {
+    margin-top: 20px;
+}
+
+.separator {
+    border-top: 3px solid black;
+}
