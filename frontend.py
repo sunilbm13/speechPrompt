@@ -1,6 +1,8 @@
 import streamlit as st
-from backend import convert_speech_to_text  # Import the function from backend.py
-from backend import convert_speech_to_text, text_to_speech
+# from backend import convert_speech_to_text  # Import the function from backend.py
+# from backend import convert_speech_to_text, text_to_speech
+from backend import convert_speech_to_text, text_to_speech, get_language_code
+
 
 # Frontend UI layout
 def main():
@@ -19,39 +21,14 @@ def main():
         st.write("Translated Text:", translated_text)
 
         # Convert translated text to speech and save as audio file
-        text_to_speech(translated_text, target_code)
+        audio_filename = text_to_speech(translated_text, target_code)
+        st.write("Audio File Name:", audio_filename)  # Add this line to print the filename
 
         # Add play button to listen to the generated audio file 
-        audio_file = open("translated_audio.mp3", "rb")
+        audio_file = open(audio_filename, "rb")
         audio_bytes = audio_file.read()
         st.audio(audio_bytes, format="audio/mp3")
 
-# Define a function to map language names to language codes
-def get_language_code(language):
-    language_mapping = {
-        "English": "en",
-        "Kannada": "kn",
-        "Hindi": "hi",
-        "Bengali": "bn",
-        "Telugu": "te",
-        "Marathi": "mr",
-        "Tamil": "ta",
-        "Urdu": "ur",
-        "Gujarati": "gu",
-        "Kannada": "kn",
-        "Odia": "or",
-        "Malayalam": "ml",
-        "Punjabi": "pa",
-        "Assamese": "as",
-        "Maithili": "mai",
-        "Santali": "sat",
-        "Kashmiri": "ks",
-        "Nepali": "ne",
-        "Konkani": "kok",
-        "Sindhi": "sd"
-        # Add more languages and their codes as needed
-    }
-    return language_mapping.get(language, "en")  # Default to English if language not found
 
 # Run the frontend
 if __name__ == "__main__":
